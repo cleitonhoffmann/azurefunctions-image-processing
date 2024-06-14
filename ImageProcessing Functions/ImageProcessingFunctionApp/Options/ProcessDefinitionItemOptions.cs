@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageProcessingFunctionApp.Steps.ArchiveSource
+namespace ImageProcessingFunctionApp.Options
 {
-    internal class ArchiveSourceProcessStepOptions : IProcessStepOptions
+    public class ProcessDefinitionItemOptions
     {
         public string StepType { get; set; } = string.Empty;
+
+        public IDictionary<string, string> Settings { get; set; } = new Dictionary<string, string>();
     }
 }

@@ -62,8 +62,8 @@ namespace ImageProcessingFunctionApp
 
                 await _processStepCreator
                     .Get(processStepOptions.StepType)
-                    .Build()
-                    .ExecuteAsync(name, copyStream, processStepOptions);
+                    .Build(processStepOptions.Settings)
+                    .ExecuteAsync(name, copyStream);
             }
 
             if (_imageSourceOptions.DeleteSourceFileAfterProcessingEnabled)

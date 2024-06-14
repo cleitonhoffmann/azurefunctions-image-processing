@@ -14,15 +14,15 @@ namespace ImageProcessingFunctionApp.Steps.BlobUpload
         private readonly BlobUploadProcessStepOptions _options;
         private readonly IBlobStorageService _blobStorageService;
 
-        public BlobUploadProcessStep(IOptions<BlobUploadProcessStepOptions> options, IBlobStorageService blobStorageService)
+        public BlobUploadProcessStep(BlobUploadProcessStepOptions options, IBlobStorageService blobStorageService)
         {
             _blobStorageService = blobStorageService;
-            _options = options.Value;
+            _options = options;
         }
 
         public Task ExecuteAsync(string fileName, Stream fileStream)
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }

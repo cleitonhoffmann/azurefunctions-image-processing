@@ -1,5 +1,4 @@
-﻿using ImageProcessingFunctionApp.Contracts.Options;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +20,6 @@ namespace ImageProcessingFunctionApp.Options
 
         public string FileLogContainerName { get; set; } = string.Empty;
 
-        public IEnumerable<IProcessStepOptions> ProcessDefinition { get; set; } = new List<IProcessStepOptions>();
+        public IEnumerable<ProcessDefinitionItemOptions> ProcessDefinition { get; set; } = new List<ProcessDefinitionItemOptions>();
     }
 }

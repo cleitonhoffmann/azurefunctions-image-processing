@@ -23,6 +23,29 @@
           "ResizeMaxWidth": 800,
           "ResizeMaxHeight": 800
         }
+      },
+
+      {
+        "StepType": "archive-source",
+
+        "Settings": {
+          "ContainerName": "output-archive"
+        }
+      },
+
+      {
+        "StepType": "http-notification",
+
+        "Settings": {
+          "Url": "https://",
+          "HttpMethod": "POST",
+          "HttpHeaders": [
+            {
+              "Name": "Content-Type",
+              "Value": "application/json"
+            }
+          ]
+        }
       }
     ]
   }

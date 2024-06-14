@@ -1,5 +1,4 @@
-﻿using ImageProcessingFunctionApp.Contracts.Options;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +10,6 @@ namespace ImageProcessingFunctionApp.Contracts.Steps
     {
         string StepType { get; }
 
-        IProcessStep Build();
+        IProcessStep Build(IDictionary<string, string> settings);
     }
 }

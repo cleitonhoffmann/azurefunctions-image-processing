@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ImageProcessingFunctionApp.Steps.ArchiveSource
 {
-    internal class ArchiveSourceProcessStep : IProcessStep<ArchiveSourceProcessStepOptions>
+    internal class ArchiveSourceProcessStep : IProcessStep
     {
-        public Task ExecuteAsync(string fileName, Stream fileStream, ArchiveSourceProcessStepOptions options)
+        public Task ExecuteAsync(string fileName, Stream fileStream)
         {
             throw new NotImplementedException();
         }
